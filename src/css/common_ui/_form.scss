@@ -1,0 +1,117 @@
+input:focus { outline: 0 none; }
+
+
+.app-checkbox {
+	top: -1px;
+	width: 20px;
+	height: 20px;
+	border: 1px solid #CCC;
+	vertical-align: middle;
+	cursor: pointer;
+	z-index:1;
+	-webkit-user-select: none; display: inline-block; position: relative; overflow: hidden;
+
+}
+.app-checkbox input {
+position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px; height:100%; width:100%;
+}
+.app-checkbox.checked .app-checkbox__div {
+	width: 14px;
+	height: 14px;
+	margin: 2px 0 0 2px;
+	background: #b2b2b2;
+}
+.app-checkbox.focused {
+	border: 1px solid #aaa;
+}
+.app-checkbox.disabled {
+	opacity: 0.55;
+	filter: alpha(opacity=55);
+}
+
+.datepicker {
+	font-size: 12px;
+	margin-top: -1px;
+	border: solid 1px $c-gray-light;
+	button {
+		outline: none;
+		border: 0px;
+	}
+	thead {
+		tr:first-child {
+			height: 60px;
+		}
+		th {
+			font-weight: normal;
+			color: $c-gray-dark;
+		}
+		.btn {
+			color: $c-gray-dark;
+			height: 60px;
+			background: #fff;
+			border: solid 1px $c-gray-light;
+			position: absolute;
+			top: -1px; left: 0;
+			strong {
+				font-weight: normal;
+			}
+		}
+		.btn-block {
+			display: block;
+			width: 100%;
+			z-index: 0;
+		}
+		.pull-left {
+			width: 60px;
+			z-index: 1;
+			left: -1px;
+		}
+		.pull-right {
+			width: 60px;
+			left: auto; right: -1px;
+			z-index: 1;
+		}
+		.arrow-prev, .arrow-next {
+			width: 7px;
+			height: 13px;
+			background-size: 100% 100%;
+			position: absolute;
+			left: 50%; top: 50%;
+			margin: -7px 0 0 -4px;
+		}
+		.arrow-next {
+
+		}
+	}
+	tbody{
+		td { 
+			padding: 0 3px;
+		}
+		button {
+			color: #999;
+			border: solid 1px #fff;
+			padding: 0;
+			background: $c-white;
+			font-size: 12px;
+			width: 100%;
+			height: 32px;
+			line-height: 30px;
+			-webkit-transition: border 375ms, color 375ms, background 375ms, -webkit-transform 375ms;
+			transition: border 375ms, color 375ms, background 375ms, transform 375ms;
+			&.btn-today {
+				border: solid 1px $c-gray-light;
+			}
+			&.btn-muted {
+				display: none;
+			}
+			&[disabled="disabled"] {
+				color: $c-gray-light;
+			}
+			&:hover {
+				background: $c-blue;
+				border: solid 1px $c-blue;
+				color: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,115 @@
+- var staticPath = "/front/markup/feedback/static";
+-	var mosStaticPath = "/static";
+
+
+//- Usage examples
+//- +html(["ru"|"en"])
+//- "ru" - русскоязычный
+//- "en" - басурманский
+mixin html(lang)
+	- lang = lang || ru;
+	- var txt = '';
+	- txt += '\n<!--[if lt IE 7]><html class="lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="'+lang+'"><![endif]-->\n';
+	- txt += '<!--[if IE 7]><html class="lt-ie10 lt-ie9 lt-ie8" lang="'+lang+'"><![endif]-->\n';
+	- txt += '<!--[if IE 8]><html class="lt-ie10 lt-ie9" lang="'+lang+'"><![endif]-->\n';
+	- txt += '<!--[if IE 9]><html class="lt-ie10" lang="'+lang+'"><![endif]-->\n';
+	- txt += '<!--[if gt IE 9]><!--><html lang="'+lang+'"><!--<![endif]-->\n';
+
+	| !{txt}
+
+
+
+//- Usage examples
+//- +header(["main"|"inner"|"search"])
+//- "main" - главная
+//- "inner" - внутренние
+//- "search" - поиск
+
+//- Usage examples:
+//- +title('Page title')
+//- +title('Page title', 'Category title')
+//- +title('Page title', 'Sub Category title', 'Category title')
+mixin title(...titleParts)
+	- var t = "Сайт Москвы"
+	each titlePart in titleParts.reverse()
+		- t = titlePart + " / " + t
+	title #{t}
+
+mixin titleEn(...titleParts)
+	- var t = "Moscow City Web Site"
+	each titlePart in titleParts.reverse()
+		- t = titlePart + " / " + t
+	title #{t}
+
+
+
+//- Usage examples
+//- +body("advisor","page-advisor")
+mixin body(id, cl)
+	- cl = cl || "";
+
+	body(
+		class=cl
+		data-ng-app=id
+		data-redline="false"
+		translate-cloak=""
+		)&attributes(attributes)
+		if block
+			block
+
+
+
+//- Usage examples
+//- +base("/advisor/")
+mixin base(href)
+	base(
+		href=href
+		)
+
+
+//- Usage examples
+//- +statcss("app/mainpage_v2/mainpage_v2.min.css")
+mixin statcss(href)
+	link(
+		rel="stylesheet"
+		href=staticPath+href
+		)
+
+//- Usage examples
+//- +statjs("app/mainpage_v2/mainpage_v2.min.js")
+mixin statjs(href)
+	script(
+		src=staticPath+href
+		)
+
+//- useful wrapper layout
+mixin wrapper()
+	.b-fix-wrapper
+		.b-content.b-content__min-height
+			if block
+				block
+
+//- default footer layout
+mixin footer(lang)
+	- var locale = {"ru":"ru-ru", "en":"en"};
+	- lang = lang || "ru";
+	- locale = locale[lang];
+	- locale = locale || locale.ru;
+
+	block error-feedback
+		div(data-error-feedback)
+
+
+	block scripts
+		+statjs("/js/libs1.js?mosRuVersionControlFlag")
+		+statjs("/js/libs2.js?mosRuVersionControlFlag")
+		+statjs("/js/libs3.js?mosRuVersionControlFlag")
+		+statjs("/app/mosapp.js?mosRuVersionControlFlag")
+		block appscripts
+		block localescripts
+			+statjs("/js/angular/i18n/angular-locale_"+locale+".js?mosRuVersionControlFlag")
+
+		block grunticon
+			<script>grunticon(["!{staticPath}/icons/icons.data.svg.css?mosRuVersionControlFlag", "!{staticPath}/icons/icons.data.png.css?mosRuVersionControlFlag", "!{staticPath}/icons/icons.fallback.css?mosRuVersionControlFlag"], grunticon.svgLoadedCallback);</script>
+			+statjs("/js/script.min.js?mosRuVersionControlFlag")
+

@@ -1,0 +1,46 @@
+//
+// Фильтр для результатов поиска
+// ==============================
+// /app/search/search_results/search_filter/_style.scss
+//
+// .b-search-results__filter - блок фильтра
+
+
+.b-search-results__filter {
+
+}
+
+// .b-search-filter__items - элемент фильтра
+//
+// <div class="b-search-results__filter">
+// 	<ul class="b-search-filter__items clearfix">
+// 		<li class="current"><a class="link-gray-medium" href=""><span class="text">Все категории</span><span class="num">1 854</span></a></li>
+// 		<li><a class="link-gray-medium" href=""><span class="text">Новости</span><span class="num">132</span></a></li>
+// 		<li><a class="link-gray-medium" href=""><span class="text">Статьи</span><span class="num">16</span></a></li>
+// 		<li class="pull-right">
+// 			<label>
+// 				<div class="jq-checkbox custom" unselectable="on" style="-moz-user-select: none; display: inline-block; position: relative; overflow: hidden;"><input type="checkbox" class="custom" value="1" name="portals" style="position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;"><div class="jq-checkbox__div"></div></div><span class="text"> Искать на других порталах правительства Москвы</span><span class="num">181 245</span>
+// 			</label>
+// 		</li>
+// 	</ul>
+// </div>
+// 
+
+.b-search-filter__items {
+	padding: 0; margin: 5px 0 17px 80px; list-style: none;
+	li {
+		float: left; padding: 0; margin: 0 50px 15px 0; white-space: nowrap;
+		font-size: 14px; line-height: 17px;
+	}
+	.current a {
+		color: $c-red;
+		cursor: default;
+		&:hover {
+			color: $c-red;
+			cursor: default;
+		}
+	}
+	input + .text, .jq-checkbox + .text { margin-left: 12px; }
+	.num { color: #b2b2b2; margin-left: 12px; }
+}
+

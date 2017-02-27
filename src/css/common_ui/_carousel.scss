@@ -1,0 +1,285 @@
+.color_lite_gray {
+	.s-carousel {
+		background: $c-gray-lighter; color: $c-gray-dark;
+	}
+	.b-carousel__item{
+		a {
+			color: $c-gray-dark;
+			&:hover {
+				color: $c-gray-base;
+			}
+		}
+		+ .b-carousel__item:before {
+			background: $c-gray-light;
+		}
+	}
+	.b-carousel__item-cat {
+		color: $c-black;
+	}
+	.b-carousel__item-date {
+		color: $c-gray;
+	}
+
+
+	.b-carousel__dtm {
+		.b-carousel__item-cat {
+			color: $c-blue;
+			.ico {
+				background-size: 100% 100%;
+				height: 10px;
+				margin: 0 0 0 6px;
+				width: 5px;
+				background-size: cover;
+				background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211.125%22%20height%3D%2220.125%22%20viewBox%3D%220%200%2011.125%2020.125%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%232a9dff%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M1.096%201.082l9.002%208.998-9.002%209.002%22%2F%3E%3C%2Fsvg%3E");
+			}
+			&:hover{
+				color: $c-blue-dark;
+				text-decoration: none;
+			}
+		}
+	}
+
+}
+
+
+
+.color_blue {
+	.s-carousel {
+		background: $c-blue;color: #fff;
+	}
+	.b-carousel__item{
+		a { color: #fff; }
+		+ .b-carousel__item:before {
+			background: rgba(117, 191, 255, 0.5);
+		}
+	}
+	.b-carousel__item-cat {
+		color: #fff;
+		.ico { background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%225.014%22%20height%3D%2210.026%22%20viewBox%3D%220%200%205.014%2010.026%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200l5.014%205.012L0%2010.026%22%2F%3E%3C%2Fsvg%3E"); }
+	}
+	.b-carousel__item-date {
+		color: #fff; opacity: 0.7;
+	}
+}
+
+
+
+
+
+.b-carousel__cdt {
+
+	.b-carousel__item {
+		padding: 24px 30px 24px 30px; position: relative;
+		+ .b-carousel__item:before {
+			content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%;
+		}
+	}
+
+	.b-carousel__item-cat {
+		font-size: 14px; text-transform: uppercase; margin: 0 0 20px 0;
+		.ico {
+			-webkit-transition: margin 250ms, -webkit-transform 250ms;
+			transition: margin 250ms, transform 250ms;
+		}
+		&:hover {
+			text-decoration: none;
+			.ico { margin-left: 10px; }
+		}
+	}
+	.b-carousel__item-date {
+		font-size: 14px; text-transform: uppercase;
+		margin: 20px 0 12px 0;
+		display: block;
+	}
+	.b-carousel__item-title {
+		font-size: 18px; line-height: 24px;
+		margin: 12px 0 10px 0;
+		display: block;
+		overflow: hidden; word-wrap: break-word;
+		text-overflow: clip ellipsis;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+}
+
+
+
+
+.b-carousel__dtm {
+
+	.b-carousel__item {
+		padding: 24px 30px 50px 30px; position: relative;
+		+ .b-carousel__item:before {
+			content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%;
+		}
+	}
+
+	.b-carousel__item-cat {
+		font-size: 14px; margin: 0 0 20px 0;
+		position: absolute; bottom: 0; left: 0; padding: 0 25px; width:100%;
+		// .ico { width: 5px; height: 10px; right: 30px; top: 50%; position: absolute; margin-top: -5px; }
+	}
+	.b-carousel__item-date {
+		font-size: 14px; text-transform: uppercase;
+		margin: 0 0 12px 0;
+		display: block;
+	}
+	.b-carousel__item-title {
+		font-size: 18px; line-height: 24px;
+		margin: 12px 0 10px 0;
+		display: block;
+		overflow: hidden; word-wrap: break-word;
+		text-overflow: clip ellipsis;
+		min-height: 145px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+
+@media screen and (max-width:991px) {
+	.b-carousel__cdt {
+		.b-carousel__item {
+			padding: 22px 20px 24px 20px;
+		}
+		.b-carousel__item-cat, .b-carousel__item-date {
+			font-size: 12px;
+		}
+		.b-carousel__item-title {
+			font-size: 14px; line-height: 20px;
+		}
+	}
+
+	.b-carousel__dtm {
+
+		.b-carousel__item {
+			padding: 22px 20px 50px 20px;
+		}
+
+		.b-carousel__item-cat {
+			font-size: 12px;
+		}
+		.b-carousel__item-date {
+			font-size: 12px;
+		}
+		.b-carousel__item-title {
+			font-size: 14px; line-height: 20px;
+			min-height: 125px;
+		}
+	}
+}
+
+
+.contrast {
+	.color_lite_gray {
+		.s-carousel {
+			background: $c-white; color: $c-black;
+		}
+		.b-carousel__item{
+			a {
+				color: $c-black;
+				&:hover {
+					color: $c-black;
+					text-decoration: underline;
+				}
+			}
+			+ .b-carousel__item:before {
+				background: $c-white;
+			}
+		}
+		.b-carousel__item-cat {
+			color: $c-black;
+		}
+		.b-carousel__item-date {
+			color: $c-gray-contrast;
+		}
+
+
+		.b-carousel__dtm {
+			.b-carousel__item-cat {
+				color: $c-black;
+				.ico {
+					height: 14px;
+					width: 7px;
+					background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2211.125%22%20height%3D%2220.125%22%20viewBox%3D%220%200%2011.125%2020.125%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M1.096%201.082l9.002%208.998-9.002%209.002%22%2F%3E%3C%2Fsvg%3E");
+				}
+				&:hover{
+					color: $c-black;
+					text-decoration: underline;
+				}
+			}
+		}
+
+	}
+
+
+
+	.color_blue {
+		.s-carousel {
+			background: $c-black;color: $c-white;
+		}
+		.b-carousel__item{
+			a { color: $c-white; }
+			+ .b-carousel__item:before {
+				background: transparent;
+			}
+		}
+		.b-carousel__item-cat {
+			color: $c-white;
+			.ico { background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%225.014%22%20height%3D%2210.026%22%20viewBox%3D%220%200%205.014%2010.026%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200l5.014%205.012L0%2010.026%22%2F%3E%3C%2Fsvg%3E"); }
+		}
+		.b-carousel__item-date {
+			color: $c-white; opacity: 0.8;
+		}
+	}
+
+
+
+
+
+	.b-carousel__cdt, .b-carousel__dtm {
+		.b-carousel__item-cat {
+			font-size: 19px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.b-carousel__item-date {
+			font-size: 16px;
+		}
+		.b-carousel__item-title {
+			font-size: 24px; line-height: 32px;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+}
+
+
+
+// мобильная версия
+
+html.phone {
+	body .b-carousel {
+		&__cdt &__item {
+			padding: 15px 20px;
+			&-cat {
+				margin: 10px 0;
+			}
+			&-date {
+				margin: 10px 0;
+			}
+			&-title {
+				margin: 10px 0;
+			}
+		}
+	}
+}
+

@@ -1,0 +1,15 @@
+.mos-feedback-info
+	.mos-feedback-info__title {{mail.title}}
+	div(data-mos-feedback-alerts="" data-section-code="feedback.mail")
+	.mos-feedback-info__mail
+		.row
+			.mos-feedback-info__mail-address.col-sm-5.col-md-5.col-xs-12
+				p.mos-feedback-info__mail-title {{mail.address.title}}
+				p(data-ng-bind-html="mail.address.description")
+			.mos-feedback-info__mail-mode.col-sm-7.col-md-7.col-xs-12
+				p.mos-feedback-info__mail-title {{mail.mode.title}}
+				.mos-feedback-info__mail-list
+					.mos-feedback-info__mail-list-item(data-ng-repeat="item in mail.mode.list")
+						span {{item.day}}
+						span {{item.time}}
+					p(data-ng-if="mail.mode.special") {{mail.mode.special}}

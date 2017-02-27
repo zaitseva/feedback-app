@@ -1,0 +1,18 @@
+.mos-feedback-info
+	.mos-feedback-info__title {{meet.title}}
+	div(data-mos-feedback-alerts="" data-section-code="feedback.meet")
+	.mos-feedback-info__meet
+		.row
+			.mos-feedback-info__meet-address.col-sm-5.col-md-5.col-xs-12
+				p.mos-feedback-info__meet-title {{meet.address.title}}
+				p {{meet.address.description}}
+				p.mos-feedback-info__meet-title {{meet.phone.title}}
+				p {{meet.phone.description}}
+			.mos-feedback-info__meet-mode.col-sm-7.col-md-7.col-xs-12
+				p.mos-feedback-info__meet-title {{meet.mode.title}}
+				.mos-feedback-info__meet-list
+					.mos-feedback-info__meet-list-item(data-ng-repeat="item in meet.mode.list")
+						span {{item.day}}
+						span(data-ng-bind-html="item.time")
+					p(data-ng-if="meet.mode.special") {{meet.mode.special}}
+		div(data-ng-bind-html="meet.text")

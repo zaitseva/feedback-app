@@ -1,0 +1,13 @@
+.mos-feedback-main(data-ng-class="{'mos-feedback-main_wide': displayMode === 'wide'}")
+	.mos-feedback-main__title Обратная связь
+	.mos-feedback-main__menu-wrapper
+		ul.mos-feedback-main__menu
+			li.mos-feedback-main__menu-item(data-ui-sref-active="mos-feedback-main__menu-item_active")
+				a(data-ui-sref="feedback.phones") Телефоны
+			li.mos-feedback-main__menu-item(data-ui-sref-active="mos-feedback-main__menu-item_active")
+				a(data-ui-sref="feedback.mail") Прием корреспонденции
+			li.mos-feedback-main__menu-item(data-ui-sref-active="mos-feedback-main__menu-item_active")
+				a(data-ui-sref="feedback.meet") Прием граждан
+			li.mos-feedback-main__menu-item.mos-feedback-main__menu-item-last(data-ui-sref-active="mos-feedback-main__menu-item_active")
+				a(data-ui-sref="feedback.reviews") Обзоры обращений
+	.mos-feedback-main__content(data-ui-view="")

@@ -1,0 +1,13 @@
+{
+  "name": "feedback",
+  "title": "MOS.RU",
+  "description": "Обратная связь",
+  "keywords": [],
+  "repository": {},
+  "author": {},
+  "copyright": "",
+  "bugs": {},
+  "homepage": "https://www.mos.ru/feedback",
+  "dependencies": {
+  }
+}

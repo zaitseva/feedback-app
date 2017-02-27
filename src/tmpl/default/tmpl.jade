@@ -1,0 +1,36 @@
+include ../mixins.jade
+
+doctype html
+block html
+head
+	meta(charset="utf-8")
+	meta(http-equiv="X-UA-Compatible" content="IE=edge")
+	meta(name="viewport" content="width=device-width")
+	meta(name="msapplication-tap-highlight" content="no")
+	block meta
+		meta(property="og:title" content="")
+		meta(property="og:description" content="")
+		meta(property="og:image" content="")
+		meta(property="og:image:url" content="")
+		meta(property="og:url" content="")
+	block title
+
+	block base
+
+	block styles
+		+statcss("/css/style.min.css?mosRuVersionControlFlag")
+		+statcss("/css/angular-motion.min.css?mosRuVersionControlFlag")
+		link(rel="stylesheet" href="/front/markup/layout/css/mos_layouts.css")
+	block appstyles
+	//- скрипты подключены в конце страницы в шаблоне футера: footer/tmpl.jade
+
+
+
+block body
+
+
+	block content
+
+	block footer
+
+</html>

@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+dimg 'front-markup-feedback' do
+  docker.from "docker-registry.local/mosru-centos7:7"
+
+  artifact do
+    chef.dimod 'mdapp-front'
+
+    git do
+      add '/' do
+        owner 'root'
+        group 'root'
+        to '/app/'
+      end
+    end
+
+    install_depends_on 'bower.json', 'package.json'
+    artifact_depends_on '.yo-rc.json', 'Gruntfile.js', 'gulpfile.js', 'src', 'version.txt'
+
+    export '/app/' do
+      after 'setup'
+      owner 'root'
+      group 'root'
+      to '/app/'
+    end
+  end
+
+  chef.dimod  'mdapp-mail', 'mdapp-nginx'
+  chef.recipe 'main'
+
+end

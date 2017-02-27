@@ -1,0 +1,6 @@
+//- панель поиска
+div(id="search-panel" class="b-search-panel" class=SEARCH_TEXT ? 'expanded' : '' class=searchpanelclass)
+	form(class="b-search-form b-search-panel__form s-autocompl-form" method="get" action="search_results.html")
+		fieldset
+			input(type="text" name="q" class="b-search-input b-search-panel__input s-autocompl-input" value=SEARCH_TEXT placeholder="Спроси город" autocomplete="off" data-prfurl="json/autocomplete_prefetch_example.json?ver=2" data-remurl="json/autocomplete_remote_example.json?anyName1=anyVal1&anyNameNNN=anyValNNN&q=%QUERY")
+			input(type="button" class="b-search-panel__button icon-lense_black")

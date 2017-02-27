@@ -1,0 +1,87 @@
+# really bad idea
+# **/.*
+
+# yii console command
+/yii
+
+# phpstorm project files
+.idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+
+# composer itself is not needed
+composer.phar
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit itself is not needed
+phpunit.phar
+# local phpunit config
+/phpunit.xml
+
+# ignore for Vagrantfile
+.cookbooks/*
+.vagrant/*
+logs
+logs/**
+project_id_rsa.pub
+.developer_id_rsa
+
+
+
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+*.ts
+
+# OS or Editor folders
+._*
+.cache
+.tmproj
+*.sublime-project
+*.sublime-workspace
+composer.lock
+
+# Folders to ignore
+.git
+.hg
+.svn
+.CVS
+bower_components
+tmp
+app_
+video_
+build
+dist
+
+# Node.JS
+node_modules
+node_modules_
+npm-debug.log
+
+# Binaries
+*.exe
+*.bak
+

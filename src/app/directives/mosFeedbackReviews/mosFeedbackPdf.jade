@@ -1,0 +1,19 @@
+.mos-feedback-reviews-pdf__close(data-ng-click="$hide()")
+.mos-feedback-reviews-pdf-modal(data-ng-non-bindable="")
+	.mos-feedback-reviews-pdf
+		.mos-feedback-reviews-pdf-wrap
+			#pdf_viewer.pdf_viewer
+.mos-feedback-reviews-pdf_toolbar
+	a.mos-feedback-reviews-pdf_toolbar-but_download(href="{{downloadPDF()}}" id="pdf_download" name="{{namePdf}}" download="{{namePdf}}")
+		span.icon-download
+		span Сохранить
+	a.mos-feedback-reviews-pdf_toolbar-but_print(ng-click="printPDF($event)" id="pdf_print" href="{{ urlPdf }}" target="_blank")
+		span.icon-print
+		span Распечатать
+	.mos-feedback-reviews-pdf_toolbar-zoom
+		button(ng-click="zoomIn()" data-ng-disabled="lock")
+			span +
+		span {{scale}}
+		button(ng-click="zoomOut()" data-ng-disabled="lock")
+			span -
+	.mos-feedback-reviews-pdf_toolbar-data {{date  | date:'dd.MM.yyyy HH:mm' }}

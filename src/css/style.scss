@@ -1,0 +1,398 @@
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../fonts/RobotoSlabRegular.woff2) format("woff2");
+    src: url(../fonts/RobotoSlabRegular.eot?#iefix) format("embedded-opentype"),
+	 url(../fonts/RobotoSlabRegular.woff) format("woff"),
+	 url(../fonts/RobotoSlabRegular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../fonts/RobotoSlabBold.woff2) format("woff2");
+    src: url(../fonts/RobotoSlabBold.woff) format("woff"),
+	 url(../fonts/RobotoSlabBold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+
+/*
+Import Bootstrap for Sass
+*/
+@import "bootstrap";
+
+@import "variables";
+
+.contrast body { letter-spacing: 0.025em; }
+
+a {
+	color: $c-blue;
+
+	&:hover { color: $c-blue-dark; }
+
+}
+
+/*.is-loading {
+	position: relative;
+	&:before {
+		content:'';
+		position: absolute;
+		left: 50%; top: 50%;
+		margin: -11px 0 0 -13px;
+		width: 27px;
+		height: 22px;
+		background-image: url('data:image/gif;base64,R0lGODlhEgAPAPIAAP///+YzM+YzM+58fPfCwgAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJBQAAACwAAAAAEgAPAAADHAi63P4wykmrvThXIS7n1tcBAwWSQwkQBKVqTgIAIfkECQUAAAAsAAAAABIADwAAAx4Iutz+MMpJq23iAsF11sowXKJolSNAUKZKrBcMPgkAIfkECQUAAAAsAAAAABIADwAAAxwIutz+MEogxLw4q6HB+B3XKQShlWWGmio7vlMCACH5BAkFAAAALAAAAAASAA8AAAMXCLrcvuLJ+cagOGtHtiKgB3RiaZ5oiiUAIfkECQUAAAAsAAAAABIADwAAAxQIuty+48knJCEz6827/2AojiSYAAAh+QQJBQAAACwAAAAAEgAPAAADFAi63L7kyTemvTgvobv/YCiOJJAAACH5BAkFAAAALAAAAAASAA8AAAMTCLrc/jAqIqu9duDNu4/CJ45XAgAh+QQJBQAAACwAAAAAEgAPAAADFAi63P4wykmrBeTqzTsbHiUIIZcAACH5BAkFAAAALAAAAAASAA8AAAMXCLrc/jDKSau9OOvtiBSYICrDQIFckwAAOwAAAAAAAAAAAA==');
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: 100% 100%;
+		z-index: 100;
+	}
+}
+*/
+.rel {
+	position: relative;
+}
+.loader {
+	position: absolute;
+	z-index: 999;
+	width: 1px;
+	height: 1px;
+	margin: 0 auto;
+	line-height: 0;
+	font-size: 0;
+	overflow: visible;
+	top: 50%;
+	left: 50%;
+	&-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 999;
+		width: 40px;
+		height: 40px;
+		margin: -20px 0 0 -20px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			z-index: -1;
+			transition: top 0.36s linear 0.925s;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			z-index: -1;
+			transition: bottom 0.36s linear 0.925s;
+		}
+		&.done:before {
+			top: -50%;
+		}
+		&.done:after {
+			bottom: -50%;
+		}
+
+		& .cssload-progress {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			transform-origin: center;
+			& .cssload-progress-item {
+				text-align: center;
+				width: 40px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid rgb(230,51,51);
+				border-radius: 50%;
+			}
+			& .cssload-progress-item:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				margin-top: -1px;
+				margin-left: 0px;
+				width: 18px;
+				height: 18px;
+				border-top: solid 4px rgb(230,51,51);
+				border-right: solid 4px rgb(230,51,51);
+				border-top-right-radius: 100%;
+				transform-origin: left bottom;
+				animation: spin 0.8s linear infinite;
+			}
+			&.cssload-float .cssload-progress-item:before {
+				border-top-width: 1px;
+				margin-top: 0px;
+				height: 20px;
+			}
+			&.cssload-float.cssload-shadow:before {
+				border-top-width: 1px;
+				margin-top: -16px;
+				height: 20px;
+			}
+			&.cssload-shadow:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin: -17px 0 0 5px;
+				width: 18px;
+				height: 18px;
+				border-top: solid 4px rgba(209,209,209, .5);
+				border-right: solid 4px rgba(209,209,209, .5);
+				border-top-right-radius: 100%;
+				z-index: -1;
+				transform-origin: left bottom;
+				animation: spin 0.8s linear infinite;
+			}
+			&.cssload-shadow:after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 40px;
+				height: 40px;
+				color: rgb(221,221,221);
+				text-align: center;
+				line-height: 40px;
+				border: 1px solid rgba(209,209,209, .5);
+				margin: -16px 0 0 -16px;
+				z-index: -1;
+				border-radius: 50%;
+				transform-origin: center;
+			}
+
+		}
+	}
+}
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+// for translate directive(custom class name not setting there)
+.translate-cloak {
+	display: none!important;
+}
+
+
+
+// Custom animations for collapse
+// http://mgcrea.github.io/angular-strap/#/collapses
+
+.collapse.am-collapse {
+	animation-duration: .3s;
+	animation-timing-function: ease;
+	animation-fill-mode: backwards;
+	overflow: hidden;
+	&.in-remove {
+		animation-name: collapse;
+		display: block;
+	}
+	&.in-add {
+		animation-name: expand;
+	}
+}
+
+/*
+html, body { background: #e5e5e5; }
+*/
+html, body { background: #d0d0d0; }
+body {
+	font-family: Arial, sans-serif;
+	overflow-y: scroll;
+}
+
+a:active, a:focus {
+	text-decoration: none;
+}
+/*
+min width is 320px, max is 1600px
+if (width > 1600px) then page content are aligned to the center of the screen
+*/
+
+/*
+.b-header__nav-wrapper - wrapper for navigation panel in the header
+*/
+/*
+.b-search-panel__form - search panel below the header
+*/
+/*
+.b-content - everything that's between the header and the footer
+*/
+
+.b-header__nav-wrapper, .b-search-panel__form, footer, .b-content {
+	max-width: $mos_max_width;
+	margin: 0 auto;
+}
+.b-content {
+	clear: both;
+	width: 100%;
+	position: relative;
+	@include clearfix;
+	background: #f4f4f4;
+	   &__block{
+	       padding: 40px 25px 65px;
+	       @include clearfix;
+	           &-header{
+	               margin-bottom: 30px;
+	           }
+	   }
+}
+
+.b-fix-wrapper {
+	clear: both;
+	width: 100%;
+	position: relative;
+	z-index: 25;
+	@include clearfix;
+}
+
+body, .b-header__nav-wrapper, .b-search-panel__form, header, footer, .b-content { min-width: 320px; }
+
+/*.nophone {
+	min-width: 768px;
+	body, .b-header__nav-wrapper, .b-search-panel__form, header, footer, .b-content { min-width: 768px; }
+}
+.phone {
+	min-width: 320px;
+	body, .b-header__nav-wrapper, .b-search-panel__form, header, footer, .b-content { min-width: 320px; max-width: 767px; }
+}*/
+
+
+
+
+.nowrap { white-space: nowrap; }
+
+
+/*
+.d_table, .d_table_row, .d_table_cell
+display containers as table cells
+*/
+.d_table { display: table; width: 100%; }
+.d_table_row { display: table-row; }
+.d_table_cell { display: table-cell; vertical-align: middle; }
+
+
+/*
+.b-white-back - force white background
+*/
+.b-white-back  { background: #fff !important; }
+
+
+
+.text-center {
+	text-align: center;
+}
+
+
+/*
+.font_12, .font_14, .font_16, .font_18, .font_24
+standard font sizes from 12px to 24px
+DO NOT USE!!! font sizes change on resize
+*/
+.font_11 { font-size: 11px; line-height: 16px; }
+.font_12 { font-size: 12px; line-height: 16px; }
+.font_14 { font-size: 14px; line-height: 17px; }
+.font_16 { font-size: 16px; line-height: 21px; }
+.font_18 { font-size: 18px; line-height: 24px; }
+.font_24 { font-size: 24px; line-height: 29px; }
+
+
+/* breadcrumbs
+.b-preamble__breadcrumbs {
+	position: absolute;
+	top: 30px; left: 30px;
+	color: #fff;
+	z-index: 10;
+}
+a.b-preamble__breadcrumbs_link, span.b-preamble__breadcrumbs_link {
+	text-decoration:none;
+	color:#ffffff;
+	font-size:12px;
+	line-height:16px;
+}
+ */
+
+.ico {display:inline-block; vertical-align:middle;}
+
+
+
+
+
+/*@import "common_ui/header";*/
+
+@import "common_ui/footer";
+
+@import "common_ui/images";
+
+@import "common_ui/form";
+
+@import "common_ui/link";
+
+@import "common_ui/second_navbar";
+
+@import "common_ui/navtitle";
+
+@import "common_ui/carousel";
+
+@import "common_ui/article";
+
+@import "common_ui/video";
+
+@import "common_ui/slick";
+
+@import "common_ui/mCustomScrollbar";
+
+@import "common_ui/searchPanel";
+
+@import "common_ui/iconic_btn";
+@import "common_ui/aside_collapse";
+@import "common_ui/collapse";
+@import "common_ui/sms-rule";
+
+/*
+___concat_tmpl.scss__ - builds automatically
+from every *.scss in /tmpl folder
+@import "concat_tmpl";
+*/
+/*
+___concat_app.scss__ - builds automatically
+from every *.scss in /app folder
+@import "concat_app";
+*/
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+@media (min-width: 1400px) {
+
+}
+
+
+
+
+
+
+
+@media print { /* НЕ ПЕЧАТАТЬ !*/
+	.noprint {
+		display: none !important;
+	}
+}

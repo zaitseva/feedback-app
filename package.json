@@ -1,0 +1,53 @@
+{
+  "name": "Feedback",
+  "version": "0.0.0",
+  "title": "Feedback",
+  "description": "Feedback",
+  "keywords": [],
+  "repository": {},
+  "author": {},
+  "copyright": "",
+  "bugs": {},
+  "homepage": "https://www.mos.ru/feedback/",
+  "engines": {
+    "node": ">= 5.5.0"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "grunt": "0.4.5",
+    "grunt-autoprefixer": "2.2.0",
+    "grunt-chokidar": "^1.0.0",
+    "grunt-combine-mq": "0.6.0",
+    "grunt-contrib-clean": "1.0.0",
+    "grunt-contrib-concat": "0.5.1",
+    "grunt-contrib-connect": "0.9.0",
+    "grunt-contrib-copy": "1.0.0",
+    "grunt-contrib-cssmin": "0.11.0",
+    "grunt-contrib-jshint": "0.12.0",
+    "grunt-contrib-pug": "1.0.0",
+    "grunt-contrib-sass": "1.0.0",
+    "grunt-contrib-uglify": "2.0.0",
+    "grunt-git": "1.0.0",
+    "grunt-html2js": "0.3.6",
+    "grunt-newer": "1.1.1",
+    "grunt-string-replace": "1.2.1",
+    "jit-grunt": "0.10.0",
+    "proxy-middleware": "0.15.0",
+    "time-grunt": "1.3.0"
+  },
+  "scripts": {
+    "preinstall": "npm cache clear"
+  },
+  "browsers": {
+    "android": 4,
+    "chrome": 45,
+    "firefox": 40,
+    "ie": 9,
+    "ios": 7,
+    "opera": 30,
+    "safari": 6
+  },
+  "dependencies": {
+    "http-rewrite-middleware": "0.1.6"
+  }
+}

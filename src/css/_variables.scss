@@ -1,0 +1,112 @@
+
+
+$arial: 'Arial', sans-serif;
+
+
+$c-black:			#000000 !default;
+$c-white:			#ffffff !default;
+
+$c-gray-base:		#191919 !default;
+$c-gray-darker:		#262626 !default;
+$c-gray-dark:		#303030 !default; /* ex.#333333 и #323232 */
+$c-gray:			#b2b2b2 !default; /* active */
+$c-gray-light:		#eaeaea !default; /* hover ex. #f4f4f4 */
+$c-gray-lighter:	#f3f2f2 !default; /* norm ex. #f9f9f9 */
+$c-gray-contrast:	#6a6a6a !default; /* gray in contrast scheme */
+
+/*$c-red-base:		#cc2d2d !default;*/
+$c-red-darker:		#cc2d2d !default; /* active */
+$c-red-dark:		#d42f2f !default; /* hover */
+$c-red:				#e63333 !default; /* norm */
+/*$c-red-light:		#e63333 !default;*/
+/*$c-red-lighter:	#e63333 !default;*/
+
+
+/*$c-green-base:	#60ad2e !default;*/
+$c-green-darker:	#409F2E !default;
+$c-green-dark:		#40AF32 !default;
+$c-green:			#50AF38 !default;
+/*$c-green-darker:	#60ad2e !default;
+$c-green-dark:		#65b332 !default;
+$c-green:			#6bba38 !default;
+*//*$c-green-light:	#9bd42a !default;*/
+$c-green-lighter:	#9bd42a !default;
+
+
+/*$c-blue-base:		#2589de !default;*/
+$c-blue-darker:		#2589de !default; /* active */
+$c-blue-dark:		#2995f2 !default; /* hover */
+$c-blue:			#2a9dff !default; /* norm */
+/*$c-blue-light:	#2a9dff !default;*/
+$c-blue-lighter:	#75BFFF !default; /* border */
+
+
+
+
+$height_norm: 65px;
+$height_attached: 90px;
+$height_search: 90px;
+
+
+
+/*
+$color_red: #E53232;
+$color_red_hover: #FF3939;
+$blue_dark: #2589de;
+$blue_normal: #2a9dff;
+$green_lite: #6BBA38;
+*/
+$mos_max_width: 1600px;
+
+$tablet: 991px;
+$phone: 767px;
+
+
+
+
+@mixin anime($anitime: 200ms, $easing: ease-out){
+	-webkit-transition: all $anitime $easing;
+	-moz-transition: all $anitime $easing;
+	-ms-transition: all $anitime $easing;
+	-o-transition: all $anitime $easing;
+	transition: all $anitime $easing;
+	/*-webkit-transform: translateZ(0);*/
+}
+
+@mixin ie-blackwhite {
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		position: relative;
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba(0, 0, 0, .6);
+		}
+	}
+}
+
+@mixin row {
+	margin-left: -20px;
+	margin-right: -20px;
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	@media screen and (max-width: $tablet) {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+}
+
+@mixin col {
+	padding-left: 20px;
+	padding-right: 20px;
+	@media screen and (max-width: $tablet) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}

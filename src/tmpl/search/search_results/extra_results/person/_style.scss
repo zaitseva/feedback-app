@@ -1,0 +1,42 @@
+.b-search-results__extra-person {
+	padding: 30px 20px 30px 19px;
+}
+.b-search-results__person-image {
+	width: 95px;
+	float: left;
+	img {width: 100%; height: auto; }
+}
+.b-search-results__person-details {
+	margin-right: 210px; 
+	margin-left: 120px;
+	@include anime(175ms, ease-in-out);
+}
+.b-search-results__person-name {
+	margin: 0 0 11px;
+	font-weight: normal;
+	font-size: 24px; line-height: 30px;
+}
+.b-search-results__person-post {
+	margin: 11px 0 0 0;
+	font-size: 16px; line-height: 21px;
+}
+.b-search-results__person-bio {
+	margin: 16px 0 0 0;
+	font-size: 14px; line-height: 17px;
+	color: #b2b2b2;
+}
+.b-search-results__person-buttons {
+	width: 160px; padding: 15px 0 0 0; font-size: 0;
+	position: absolute; right: 35px; bottom: 17px;
+	@include anime(275ms, ease-in-out);
+}
+
+.b-search-results__person-more, .b-search-results__person-mess {
+	margin-bottom: 12px; font-size: 14px; width: 100%;
+	display: inline-block; vertical-align: top;
+	@include anime(175ms, ease-in-out);
+}
+
+@media screen and (max-width:1259px) {
+}
+

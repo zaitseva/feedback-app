@@ -1,0 +1,189 @@
+.b-sms-rule {
+	display: table;
+	background-color: #fff;
+	border: 1px solid #dedede;
+	width: 100%;
+	min-height: 190px;
+
+	&__desc {
+		display: table-cell;
+    	width: 30%;
+		border-right: 1px solid #dedede;
+		padding: 30px;
+		min-width: 310px;
+	}
+
+	&__desc-point {
+		display: block;
+		color: #999999;
+		font-weight: bold;
+		font-size: 25px;
+		margin-bottom: 10px;
+	}
+
+	&__desc-text {
+		display: inline;
+		font-size: 18px;
+		color: #000;
+
+		&:after {
+			content: ' ';
+			display: inline;
+			position: relative;
+		}
+
+		&_state_highlight {
+			color: #e33539;
+		}
+	}
+
+	&__code {
+		display: table-cell;
+    	width: 70%;
+		padding: 30px 30px 30px 40px;
+	}
+
+}
+
+@media (max-width: 960px) {
+
+	.b-sms-rule {
+
+		&__desc {
+			display: block;
+			width: 100%;
+			border-right: none;
+			border-bottom: 1px solid #dedede;
+		}
+
+		&__desc-point {
+			display: inline-block;
+			margin-bottom: 0;
+			margin-right: 10px;
+		}
+
+		&__code {
+			display: block;
+			width: 100%;
+		}
+	}
+}
+
+.b-sms-code {
+	position: relative;
+	display: block;
+
+	&__title {
+		display: block;
+		font-size: 14px;
+		color: #000;
+		margin-bottom: 20px;
+	}
+
+	&__wrapper {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	&__wrapper:last-child {
+		display: table;
+		margin-bottom: 0;
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		border-right: 4px solid #fff;
+
+	}
+
+	&__value {
+		color: #2c8adb;
+		font-size: 25px;
+		line-height: 53px;
+		min-width: 53px;
+		padding: 0 19px;
+		height: 53px;
+		background-color: #f4f4f4;
+		white-space: nowrap;
+
+		&_type_star {
+			color: #905a63;
+			font-size: 60px;
+			line-height: 81px;
+			padding: 0 14px;
+		}
+
+		&_type_hash {
+			color: #905a63;
+			font-size: 30px;
+			padding: 0 18px;
+		}
+	}
+
+	&__label {
+		max-width: 100px;
+		color: #999999;
+		font-size: 12px;
+		margin-top: 5px;
+	}
+
+	&__call {
+		background-color: $c-green;
+		line-height: 53px;
+		height: 54px;
+		font-size: 20px;
+		padding: 0 27px 0 20px;
+		color: #fff;
+
+		.ico {
+			width: 20px;
+		    height: 25px;
+		    background-size: 20px 25px;
+		    margin-right: 10px;
+		}
+	}
+}
+
+@media (max-width: 1110px) {
+
+	.b-sms-code {
+
+		&__value {
+			font-size: 18px;
+			line-height: 30px;
+			min-width: 30px;
+			padding: 0 10px;
+			height: 30px;
+
+			&_type_star {
+				font-size: 30px;
+				line-height: 45px;
+				padding: 0 10px;
+			}
+
+			&_type_hash {
+				font-size: 16px;
+				padding: 0 10px;
+			}
+		}
+
+		&__label {
+			max-width: 80px;
+		}
+
+		&__call {
+			line-height: 30px;
+			height: 30px;
+			font-size: 18px;
+			padding: 0 17px 0 10px;
+
+			.ico {
+				width: 20px;
+			    height: 25px;
+			    background-size: 20px 25px;
+			    margin-right: 10px;
+			}
+		}
+	}
+}

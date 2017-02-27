@@ -1,0 +1,223 @@
+$color-menu-item: #757575;
+$color-menu-item-additional: #999;
+$color-menu-item-active: #000;
+
+.mos-feedback-main {
+	padding: 40px 30px 0;
+	font-family: Arial-MT, Arial, sans-serif;
+
+	hr {
+		margin: 10px 0 10px 14px;
+		border: none;
+		border-top: solid 1px #e2e2e2;
+		@media(max-width: $tablet) {
+			display: none;
+		}
+	}
+
+	&_wide {
+		padding: 40px 0 0;
+		width: 100%;
+		overflow:hidden;
+	}
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		color: #171717;
+		font-size: 22px;
+		line-height: 30px;
+		font-weight: bold;
+		letter-spacing: 0.2px;
+
+		.mos-feedback-main_wide & {
+			padding-left: 30px;
+			@media(max-width: $tablet) {
+						padding: 0 20px;
+					}
+			@media(max-width: $phone) {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	&__menu-wrapper {
+		float: left;
+		padding-right: 12px;
+		padding-bottom: 10px;
+		width: 18.75%;
+		@media(max-width: $tablet) {
+						padding-bottom: 0px;
+					}
+		&_narrow {
+
+		}
+
+		.mCustomScrollBox, .mCSB_container {
+			overflow: visible;
+		}
+
+		&_wide {
+			float: none;
+			padding-right: 0;
+			width: 100%;
+			overflow:hidden;
+			border-bottom: solid 1px #d90000;
+			.mos-feedback-main {
+				&__menu {
+					padding: 0 30px;
+					display: inline-block;
+					width: auto;
+					white-space: nowrap;
+					@media(max-width: $tablet) {
+						padding: 0 20px;
+					}
+					@media(max-width: $phone) {
+						padding: 0 20px;
+					}
+					&-item {
+						display: inline-block;
+						margin-right: 30px;
+						&:last-child {
+							margin-right: 0;
+						}
+						a {
+							color: #4a4a4a;
+							font-size: 18px;
+							line-height: 21px;
+							@media(max-width: $phone) {
+								font-size: 15px;
+								line-height: 18px;
+							}
+						}
+						&_active {
+							border-bottom: solid 6px #d90000;
+							&:before {
+								display: none;
+							}
+							a {
+								font-weight: normal;
+							}
+						}
+					}
+				}
+			}
+
+			& + .mos-feedback-main__content {
+				padding-left: 0px;
+				width: 100%;
+			}
+
+			.mCustomScrollBox, .mCSB_container {
+				overflow: hidden;
+			}
+		}
+
+		.mCSB_horizontal.mCSB_inside>.mCSB_container {
+			margin-bottom: 0px;
+		}
+
+		.mCSB_scrollTools.mCSB_scrollTools_horizontal {
+			height: 0;
+		}
+	}
+
+	&__menu {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		list-style: none;
+	}
+
+	&__menu-item {
+		height: 40px;
+		line-height: 40px;
+		position: relative;
+
+		a {
+			display: inline-block;
+			padding-left: 14px;
+			color: $color-menu-item;
+			font-size: 16px;
+			line-height: 20px;
+			cursor: pointer;
+			@media(max-width: $tablet) {
+				padding-left: 0;
+			}
+			@media(max-width: $phone) {
+				padding-left: 0;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&_additional {
+			a {
+				color: $color-menu-item-additional;
+			}
+		}
+
+		&_active {
+			&:before {
+				content: '';
+				position: absolute;
+				display: block;
+				left: 0;
+				height: 100%;
+				width: 4px;
+				background-color: #d90000;
+			}
+			a {
+				font-weight: bold;
+				color: $color-menu-item-active;
+			}
+		}
+		&-last{
+			
+			padding-top:10px;
+			margin-top:10px;
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				left: 13px;
+				top:0;
+				height: 2px;
+				width: 100%;
+				max-width:192px;
+				background-color: #e2e2e2;
+				@media(max-width: 1007px) {
+					display:none;
+				}
+			}
+			@media(max-width: 1007px) {
+					padding-top:0;
+					margin-top:0;
+				}
+		}
+	}
+
+	&__content {
+		float: left;
+		padding-left: 12px;
+		width: 81.25%;
+	}
+}
+.contrast {
+	.mos-feedback-main__menu-item_active:before {background-color:$c-black;}
+	.mos-feedback-info_main__button {background-color:$c-black;}
+	.mos-feedback-info_main .mos-feedback-info_main__text a {color:$c-black; text-decoration:underline;}
+	.mos-feedback-info .mos-feedback-info__phones-phone {color:$c-black;}
+	.mos-feedback-phones__info_type_phone {color:$c-black;}
+	.mos-feedback-main__menu-wrapper_wide {border-color:$c-black;}
+	.mos-feedback-main__menu-wrapper_wide .mos-feedback-main__menu-item_active {border-color:$c-black;}
+	.mos-feedback-info-rules .mos-feedback-info__text a {color:$c-black; text-decoration:underline;}
+	.mos-feedback-main__menu-item a {color:$c-black;}
+	.mos-feedback-main__menu-item a:hover {text-decoration:underline;}
+}

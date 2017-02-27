@@ -1,0 +1,256 @@
+.color_bw {
+	.b-second-navbar {
+		background: $c-white;
+	}
+	.b-second-navbar a {
+		color: $c-gray-darker; background: $c-white;
+		&[href]:hover {
+			color: $c-white;
+			background: $c-red;
+		}
+	}
+
+	.b-second-navbar .active a {
+		color: $c-gray-darker; background: $c-white;
+/*		&:hover {
+			color: $c-white;
+			background: $c-red;
+		}
+*/	}
+	.b-second-navbar .dropdown.open > a {
+		color: $c-white;
+		background: $c-red;
+	}
+	.dropdown .dropdown-menu {
+		li {
+			a {
+				background-color: $c-gray-lighter;
+				border-bottom: solid 1px rgba(0, 0, 0, 0.15);
+				border-right: solid 1px rgba(0, 0, 0, 0.15);
+				border-left: solid 1px rgba(0, 0, 0, 0.15);
+				&:hover {
+					border-bottom: solid 1px $c-red;
+					border-right: solid 1px $c-red;
+					border-left: solid 1px $c-red;
+				}
+			}
+			&.active a {
+				color: $c-white;
+				background: $c-red;
+				border-bottom: solid 1px $c-red;
+				border-right: solid 1px $c-red;
+				border-left: solid 1px $c-red;
+			}
+		}
+	}
+}
+
+
+
+
+.b-second-navbar-wrapper {
+	width: 100%; z-index: 100;
+}
+.b-second-navbar-wrapper:first-child {
+}
+.b-second-navbar-wrapper.attached, .b-second-navbar-wrapper.attached:first-child {
+	position: fixed;
+	margin-top: 0; top: 90px;
+}
+.b-second-navbar-wrapper.attached:first-child + div {
+	margin-top: 50px;
+}
+.b-second-navbar {
+	font-size: 0;
+	text-align: center; z-index: 100;
+	height: 100%; max-width: 1600px;
+	min-width: 768px;
+}
+
+.b-second-navwrap {
+	display: inline-block;
+	margin: 0; line-height: 48px;
+	-webkit-transition: margin 775ms, line-height 775ms, -webkit-transform 775ms;
+	transition: margin 775ms, line-height 775ms, transform 775ms;
+	li {
+		position: relative;
+		a { padding: 20px 40px; text-align: center;
+			-webkit-transition: padding 775ms, font-size 775ms, font-weight 275ms, color 275ms, background 275ms, -webkit-transform 775ms;
+			transition: padding 775ms, font-size 775ms, font-weight 275ms, color 275ms, background 275ms, transform 775ms;
+		}
+/*
+		span {
+			position: absolute; background: rgba(24,142,242,0);
+			-webkit-transition: height 275ms, background 225ms, -webkit-transform 275ms;
+			transition: height 275ms, background 225ms, transform 275ms;
+			left: 0; top: 0; z-index: 0;
+			width: 100%; height: 0;
+		}
+*/
+	}
+	.dropdown .ico {
+		width: 8px;
+		height: 5px;
+		display: inline-block;
+		margin-left: 10px;
+		margin-bottom: 1px;
+		background-size: 100% 100%;
+		background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212.041%22%20height%3D%227.015%22%20viewBox%3D%220%200%2012.041%207.015%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23333%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M11.04%201L6.02%206.015%201%201%22%2F%3E%3C%2Fsvg%3E");
+	}
+	.dropdown a:hover .ico, .dropdown.open > a .ico {
+		background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212.025%22%20height%3D%227.013%22%20viewBox%3D%220%200%2012.025%207.013%22%3E%3Cpath%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%2210%22%20d%3D%22M11.025%201L6.013%206.013%201%201%22%2F%3E%3C%2Fsvg%3E");
+	}
+	.dropdown-menu {
+		margin-top: -1px;
+		width: 100%;
+		min-width:175px;
+		padding: 0;
+		border: 0;
+		min-width:180px;
+		li {
+			a {
+				text-align: left;
+				white-space: normal;
+				padding: 18px 15px 18px 25px;
+				font-weight: normal;
+				&:hover {
+				}
+			}
+		}
+	}
+}
+
+.b-second-navbar a {
+	white-space: nowrap;
+	font-size: 18px; z-index: 1;
+	font-weight: 400;
+}
+
+.b-second-navbar .active a {
+	font-weight: 700;
+	&:hover {
+	}
+}
+.b-second-navwrap > li.active span {
+	height: 100%;
+	&:after {
+		opacity: 1;
+	}
+}
+
+.attached .b-second-navbar {
+	text-align: left;
+		min-height: 50px;
+/*
+	.b-second-navwrap { margin-left: 59px; line-height: 16px; }
+*/
+	.b-second-navwrap { margin-left: 0; line-height: 16px; }
+	a {
+		line-height: 16px;
+		font-size: 14px;
+		max-height: 50px;
+		overflow: hidden;
+	}
+	.b-second-navwrap > li > a { padding: 17px 25px; }
+}
+
+
+
+@media screen and (max-width:991px) {
+	.attached .b-second-navbar {
+		.b-second-navwrap { margin-left: 7px; }
+	}
+	.b-second-navwrap li {
+		a {
+			font-size: 16px;
+			padding: 12px 15px;
+		}
+		span {
+			&:after {
+				width: 16px; height: 6px; margin-left: -8px;
+			}
+		}
+	}
+}
+
+
+
+@media (max-width:767px) {
+	.b-second-navbar-wrapper {
+		display: none !important;
+		visibility: hidden !important;
+		height: 0 !important;
+		overflow: hidden !important;
+	}
+}
+@media (min-width:768px) {
+}
+
+
+.contrast {
+	.color_bw {
+		.b-second-navbar {
+			border-bottom: solid 1px $c-gray-contrast;
+		}
+		.b-second-navbar a {
+			color: $c-black; background: $c-white;
+			&[href]:hover {
+				color: $c-white;
+				background: $c-black;
+			}
+		}
+
+		.b-second-navbar .active a {
+			color: $c-black; background: $c-white;
+			&:hover {
+				color: $c-white;
+				background: $c-black;
+			}
+		}
+		.b-second-navbar .dropdown.open > a {
+			color: $c-white;
+			background: $c-black;
+		}
+		.dropdown .dropdown-menu {
+			li {
+				a {
+					background-color: $c-white;
+					border-bottom: solid 1px $c-gray-contrast;
+					border-right: solid 1px $c-gray-contrast;
+					border-left: solid 1px $c-gray-contrast;
+					&:hover {
+						border-bottom: solid 1px $c-black;
+						border-right: solid 1px $c-black;
+						border-left: solid 1px $c-black;
+					}
+				}
+				&.active a {
+					color: $c-white;
+					background: $c-black;
+					border-bottom: solid 1px $c-black;
+					border-right: solid 1px $c-black;
+					border-left: solid 1px $c-black;
+				}
+			}
+		}
+	}
+
+	.b-second-navbar a, .attached .b-second-navbar a {
+		font-size: 19px;
+	}
+	.b-second-navbar .active a {
+		font-weight: 700;
+		&:hover {
+		}
+	}
+}
+
+// мобильная версия
+
+html.phone {
+	body {
+		& .b-second-navbar-wrapper.attached:first-child + div {
+			margin-top: 0;
+		}
+	}
+}

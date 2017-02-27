@@ -1,0 +1,10 @@
+.mos-error
+	.header
+		h1 {{pageInfo.title}}
+		p(data-ng-if="pageInfo.desc" data-ng-bind-html='pageInfo.desc | to_trusted')
+		p(data-ng-if="!pageInfo.desc" data-translate="mosError.errorTitle")
+	.links
+		ul
+			li(data-ng-repeat='link in pageInfo.links')
+				a(ng-href="{{link.href}}")
+					span {{link.text}}

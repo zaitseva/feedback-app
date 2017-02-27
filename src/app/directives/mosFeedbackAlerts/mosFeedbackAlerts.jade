@@ -1,0 +1,3 @@
+.mos-feedback-alerts(data-ng-class="{'mos-feedback-alerts_notice': notice.type === 'notice'}" data-ng-if="!hideme")
+	span.mos-feedback-alerts__icon(data-ng-class="notice.type === 'notice' ? 'mos-feedback-alerts__icon_notice' : 'mos-feedback-alerts__icon_info'")
+	.mos-feedback-alerts__message(data-ng-bind-html="notice.message")

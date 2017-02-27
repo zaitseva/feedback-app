@@ -1,0 +1,27 @@
+.mos-feedback-info
+	.mos-feedback-info__title {{phones.title}}
+	div(data-mos-feedback-alerts="" data-section-code="feedback.phones")
+	.mos-feedback-info__phones
+		.row
+			.mos-feedback-info__phones-first.col-sm-6.col-md-6.col-xs-12
+				.mos-feedback-info__phones-title {{phones.items[0].title}}
+				.mos-feedback-info__phones-phone {{phones.items[0].phone}}
+				.mos-feedback-info__phones-title {{phones.items[1].title}}
+				.mos-feedback-info__phones-phone {{phones.items[1].phone}}
+			.mos-feedback-info__phones-list.col-sm-6.col-md-6.col-xs-12
+				div(data-ng-repeat="phone in phones.items" data-ng-if="$index!=0 && $index!=1")
+					.mos-feedback-info__phones-title {{phone.title}}
+					.mos-feedback-info__phones-phone {{phone.phone}}
+					.mos-feedback-info__phones-phone(data-ng-if="phone.text") {{phone.text}}
+	.mos-feedback-info__sub-title {{phones.title_sub}}
+	.mos-feedback-phones__dropdown(data-ng-repeat="acc in phones.list")
+		.mos-feedback-phones__dropdown-toggle.js-phone-toggle(data-ng-click="init($event)")
+			.mos-feedback-phones__dropdown__text {{acc.title}}
+			.mos-feedback-phones__dropdown__arrow.ico.icon-arrow_down_01_black
+		.mos-feedback-phones__dropdown__content.js-phone-content.mos-feedback-phones__dropdown__content_state_hidden
+			.mos-feedback-phones
+				.mos-feedback-phones__item(data-ng-repeat="item in acc.items")
+					.mos-feedback-phones__title(data-ng-if="item.title") {{item.title}}
+					.mos-feedback-phones__info_type_phone(data-ng-if="item.phone" data-ng-bind-html="item.phone")
+					.mos-feedback-phones__info_type_time(data-ng-if="item.description")
+						p(data-ng-bind-html="item.description")

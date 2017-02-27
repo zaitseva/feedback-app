@@ -1,0 +1,16 @@
+block error-feedback
+	div(data-error-feedback)
+
+
+block scripts
+	+statjs("/front/markup/layout/js/libs1.js?mosRuVersionControlFlag")
+	+statjs("/front/markup/layout/js/libs2.js?mosRuVersionControlFlag")
+	+statjs("/front/markup/layout/js/libs3.js?mosRuVersionControlFlag")
+	+statjs("/front/markup/layout/app/mosapp.js?mosRuVersionControlFlag")
+	block appscripts
+	block localescripts
+		+statjs("/js/angular/i18n/angular-locale_ru-ru.js?mosRuVersionControlFlag")
+
+	block grunticon
+		<script>grunticon(["/front/markup/layout!{staticPath}/icons/icons.data.svg.css?mosRuVersionControlFlag", "/front/markup/layout!{staticPath}/icons/icons.data.png.css?mosRuVersionControlFlag", "/front/markup/layout!{staticPath}/icons/icons.fallback.css?mosRuVersionControlFlag"], grunticon.svgLoadedCallback);</script>
+		+statjs("/front/markup/layout/js/script.min.js?mosRuVersionControlFlag")

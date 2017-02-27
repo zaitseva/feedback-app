@@ -1,0 +1,135 @@
+stages:
+  - build
+  - sandbox
+  - engineers review
+  - testing
+  - pre-production
+  - production
+
+variables:
+  DAPP_VERSION: "0.7"
+
+# mixin запуска ci-deploy для отслеживания
+# зависимостей между job-ами,
+# проверки прав и вызова deployit.
+.ci-deploy: &ci_deploy
+  script:
+    - rvm-exec @deploy-0.10 ci-deploy
+  artifacts:
+    paths:
+      - .ci-status/
+
+.ci-deploy-manual: &ci_deploy_manual
+  <<: *ci_deploy
+  tags: [deploy-mosru]
+  when: manual
+
+###############################
+# build - сборка образов
+build:
+  stage: build
+  tags:
+    - dapp-build
+  only:
+    - tags
+    - master
+    - /^release_.*$/
+    - /^infra_.*$/
+  <<: *ci_deploy
+
+###############################
+# sandbox - Development deploys
+.ci-deploy-dev: &ci_deploy_dev
+  <<: *ci_deploy_manual
+  stage: sandbox
+  only:
+    - tags
+    - master
+    - /^infra_.*$/
+
+# First integration
+to i:
+  <<: *ci_deploy_dev
+  environment: i
+
+# Second integration
+to j:
+  <<: *ci_deploy_dev
+  environment: j
+
+to f:
+  <<: *ci_deploy_dev
+  environment: f
+
+to u:
+  <<: *ci_deploy_dev
+  environment: u
+
+to v:
+  <<: *ci_deploy_dev
+  environment: v
+
+to w:
+  <<: *ci_deploy_dev
+  environment: w
+
+to x:
+  <<: *ci_deploy_dev
+  environment: x
+
+to y:
+  <<: *ci_deploy_dev
+  environment: y
+
+to z:
+  <<: *ci_deploy_dev
+  environment: z
+
+##############################
+# stage engineers review
+# подтверждение от релиз-инженеров
+approve:
+  <<: *ci_deploy_manual
+  stage: engineers review
+  only:
+    - tags
+
+NOT approve:
+  <<: *ci_deploy_manual
+  stage: engineers review
+  only:
+    - tags
+
+##############################
+# stage testing
+to t:
+  <<: *ci_deploy_manual
+  stage: testing
+  only:
+    - tags
+  environment: t
+
+to g:
+  <<: *ci_deploy_manual
+  stage: testing
+  only:
+    - tags
+  environment: g
+
+##############################
+# stage pre-production
+to r:
+  <<: *ci_deploy_manual
+  stage: pre-production
+  only:
+    - tags
+  environment: r
+
+##############################
+# stage production -  выкат в production
+to p:
+  <<: *ci_deploy_manual
+  stage: production
+  only:
+    - tags
+  environment: p

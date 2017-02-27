@@ -1,0 +1,95 @@
+
+.b-search-results { padding: 105px 0 30px;}
+
+.b-search-results__extra {
+	border-right: solid 1px #dedede;
+	border-bottom: solid 1px #dedede;
+	border-left: solid 1px #dedede;
+	background: #fff;
+	margin: 0 15px 11px 15px;
+}
+.b-search-results__extra-main { 
+	border-top: solid 1px #dedede;
+	border-right: solid 1px #dedede;
+	position: relative;
+}
+.b-search-results__extra-side {
+	display: block;
+	vertical-align: middle;
+	border-top: solid 1px #dedede;
+	border-left: solid 1px #dedede;
+	margin-left: -1px;
+}
+
+.b-search-noresults {margin-left:80px;}
+.b-search-side__link {
+	display: block;
+	padding: 30px 35px 25px 30px;
+	&:hover {
+		text-decoration: none; 
+	}
+}
+.b-search-results__extra-wrapper {
+}
+.b-search-side__link-img {
+	width: 65px; float: left; display: block;
+	img { width: 100%; }
+}
+.b-search-side__link-text {
+	margin-left: 90px;
+	display: block;
+	.title { display: block; font-size: 18px; line-height: 21px; text-transform: uppercase; color: #000; margin-bottom: 3px; }
+	.url { display: block; font-size: 18px; line-height: 21px; color: #C41822; margin-bottom: 11px; }
+	.preview { display: block; font-size: 14px; line-height: 17px; color: #b2b2b2; }
+}
+
+
+
+
+.b-search-results__list { margin: 0 0 10px 0; }
+.b-search-results__item { padding: 0 0 0 15px; }
+
+.b-search-results__item-link {
+	display: block; margin: 0 0 0 0;
+	background: rgba(255,255,255,0);
+	padding: 23px 40px 21px 50px;
+	font-size: 14px; line-height: 17px;
+	-webkit-transition: background 300ms, color 300ms, -webkit-transform 300ms;
+	transition: background 300ms, color 300ms, transform 300ms;
+	&:hover {
+		background: rgba(255,255,255,1);
+		text-decoration: none;
+	}
+}
+.b-search-results__item-title  {
+	display: block;
+	color: #000;
+	font-size: 16px;
+	margin-bottom: 9px;
+}
+.b-search-results__item-category {
+	display: inline-block;
+	vertical-align: top;
+	color: $c-red;
+}
+.b-search-results__item-url {
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+	overflow: hidden; text-overflow: clip ellipsis;
+	color: $c-blue;
+}
+.b-search-results__item-category + .b-search-results__item-url { margin-left: 7px; }
+.b-search-results__item-preview {
+	margin-top: 9px;
+	display: block;
+	color: #b2b2b2;
+}
+
+.b-search-results__nav {
+	padding: 0 0 0 80px;
+}
+
+.b-search-results__similar { margin: 0 0 0 80px; }
+.b-search-results__similar-title { font-size: 14px; line-height: 17px; color: #b2b2b2; }
+.b-search-results__similar-link { font-size: 16px; line-height: 21px; margin: 23px 0; }

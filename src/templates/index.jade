@@ -1,0 +1,31 @@
+extends ./../../bower_components/templates/jade/tmpl.jade
+
+include ./../tmpl/vars.jade
+
+block html
+	+html("ru")
+
+block title
+	+title("Обратная связь")
+
+block base
+	+base("/feedback/")
+
+
+block appstyles
+	+statcss(localPath, "/app/feedback/feedback.min.css?mosRuVersionControlFlag")
+
+block appscripts
+	+statjs(localPath, "/app/feedback/feedback.min.js?mosRuVersionControlFlag")
+
+block body
+	+body("feedback", "page-feedback")
+
+		block content
+			+wrapper
+				div(data-ui-view="")
+
+		block footer
+			+footer
+
+		

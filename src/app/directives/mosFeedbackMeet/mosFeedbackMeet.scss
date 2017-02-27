@@ -1,0 +1,59 @@
+.mos-feedback-info {
+	background-color: #ffffff;
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom:20px;
+	padding:16px 24px;
+	color:#171717;
+
+	& .mos-feedback-info__title {
+		font-size: 20px;
+		line-height: 30px;
+		@media(max-width: $tablet) {
+			display:none;
+		}
+		@media(max-width: $phone) {
+			display:none;
+		}
+	}
+
+	& .mos-feedback-info__meet-title {
+		font-size: 18px;
+		line-height: 25px;
+		letter-spacing: 0.2px;
+	}
+	& .mos-feedback-info__meet-list-item {
+		& span {
+			display:inline-block; 
+			vertical-align:top;
+			line-height:30px;
+			@media(max-width: $tablet) {
+				max-width:160px;
+
+			}
+			@media(max-width: $phone) {
+				max-width:160px;
+
+				span:first-child {
+					display:inline-block;
+					vertical-align:top;
+					color:#999999;
+					line-height:20px;
+				}
+			}
+			span:first-child {
+				color:#171717; 
+				text-align:left;
+				margin-right:0; 
+				width:auto;
+			}
+			
+		}
+		& span:first-child {
+			color:#b6b6b6;
+			margin-right:20px;
+			text-align:right;
+			width:93px;
+		}
+	}
+}

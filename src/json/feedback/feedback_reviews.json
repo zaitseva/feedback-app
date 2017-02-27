@@ -1,0 +1,171 @@
+{
+	"title": "Обзоры обращений",
+	"text":"<p>Статистические обзоры обращений граждан, организаций и общественных объединений в адрес Мэра и Правительство Москвы.</p>",
+	"year":[
+		{
+			"title":"2017 год",
+			"link":"",
+			"quarter":[
+				{
+
+				"title":"I квартал",
+				"link":"",
+				"month":[
+					{
+						"title":"Январь",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Февраль",
+						"link":""
+					},
+					{
+						"title":"Март",
+						"link":""
+					}
+				]
+				},
+				{
+
+				"title":"II квартал",
+				"link":"",
+				"month":[
+					{
+						"title":"Апрель",
+						"link":""
+					},
+					{
+						"title":"Май",
+						"link":""
+					},
+					{
+						"title":"Июнь",
+						"link":""
+					}
+				]
+				},
+				{
+
+				"title":"III квартал",
+				"link":"",
+				"month":[
+					{
+						"title":"Июль",
+						"link":""
+					},
+					{
+						"title":"Август",
+						"link":""
+					},
+					{
+						"title":"Сентябрь",
+						"link":""
+					}
+				]
+				},
+				{
+
+				"title":"IV квартал",
+				"link":"",
+				"month":[
+					{
+						"title":"Октябрь",
+						"link":""
+					},
+					{
+						"title":"Ноябрь",
+						"link":""
+					},
+					{
+						"title":"Декабрь",
+						"link":""
+					}
+				]
+				}
+			]
+				
+		},
+		{
+			"title":"2016 год",
+			"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf",
+			"quarter":[
+				{
+
+				"title":"I квартал",
+				"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf",
+				"month":[
+					{
+						"title":"Январь",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Февраль",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Март",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					}
+				]
+				},
+				{
+
+				"title":"II квартал",
+				"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf",
+				"month":[
+					{
+						"title":"Апрель",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Май",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Июнь",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					}
+				]
+				},
+				{
+
+				"title":"III квартал",
+				"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf",
+				"month":[
+					{
+						"title":"Июль",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Август",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Сентябрь",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					}
+				]
+				},
+				{
+
+				"title":"IV квартал",
+				"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf",
+				"month":[
+					{
+						"title":"Октябрь",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Ноябрь",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					},
+					{
+						"title":"Декабрь",
+						"link":"/upload/newsfeed/newsfeed/Obshcherossijskij_den_priema_grazhdan.pdf"
+					}
+				]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,18 @@
+.mos-feedback-info
+	.mos-feedback-info__title {{ 'mosFeedbackReviews.title' | translate }}
+	div(data-mos-feedback-alerts="" data-section-code="feedback.reviews")
+	.mos-feedback-info__reviews
+		div
+			p(data-translate="mosFeedbackReviews.text")
+		div.row(data-ng-repeat="item in year")
+			div.col-md-2.col-sm-2.col-xs-12
+				span.mos-feedback-info__reviews-year(data-ng-if="!item.url") {{item.title}}
+				a.mos-feedback-info__reviews-year(data-ng-if="item.url" href=""  data-ng-click="openPdf(item.url, item.date)") {{item.title}}
+			div.col-md-10.col-sm-10.col-xs-12
+				div.row
+					div.col-md-3.col-xs-6.col-sm-3(data-ng-repeat="qr in item.quarters track by $index")
+						span.mos-feedback-info__reviews-quarter(data-ng-if="!qr.url") {{qr.title}}
+						a.mos-feedback-info__reviews-quarter(data-ng-if="qr.url" href=""  data-ng-click="openPdf(qr.url, qr.date)") {{qr.title}}
+						div.mos-feedback-info__reviews-month(data-ng-repeat="month in  item.months | startFrom: $index * 3 | limitTo: 3")
+							span(data-ng-if="!month.url") {{month.title}}
+							a(data-ng-if="month.url" href=""  data-ng-click="openPdf(month.url, month.date)") {{month.title}}
